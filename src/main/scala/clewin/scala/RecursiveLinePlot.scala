@@ -2,11 +2,16 @@ package clewin.scala
 
 import scala.collection.mutable.ArrayBuffer
 import scala.collection.JavaConversions._
+import scala.scalajs.js.annotation._
+
+import scala.scalajs.js
+import js.JSConverters._
 
 /**
 *
 */
 
+@JSExportTopLevel("RecursiveLinePlot")
 class RecursiveLinePlot(generator:MobiusGenerator, val levmax:Int, val minLineLength:Double) {
 
   val gens = Array(generator.a, generator.b, generator.a.inverse(), generator.b.inverse())
@@ -42,6 +47,14 @@ class RecursiveLinePlot(generator:MobiusGenerator, val levmax:Int, val minLineLe
 
   val repetFP = Array.tabulate(4)(i => Array.tabulate(3)(j => genRepet(i,j).fixedPoints()._1))
 
+
+  /* return an array of all the line start points */
+  @JSExport("build")
+  def build():js.Array[js.Array[Double]] = {
+    val segList:List[Segment] = apply()
+    val arrList:List[js.Array[Double]] = segList.map(segment => List[Double](segment.start.x, segment.start.y).toJSArray)
+    return arrList.toJSArray
+  }
 
   def apply():List[Segment] = {
     //val outputPoints = new ArrayBuffer[Complex]

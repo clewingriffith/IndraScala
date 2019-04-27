@@ -1,10 +1,20 @@
 package clewin.scala
 
+import scala.scalajs.js.annotation._
+import scala.scalajs.js
 /**
  * 
  */
 
+@JSExportTopLevel("GrandmaGenerator")
 object GrandmaGenerator {
+
+
+    @JSExport("build")
+		def build(ta:js.Array[Double], tb:js.Array[Double]) = {
+			apply(new Complex(ta(0),ta(1)), new Complex(tb(0),tb(1)))
+		}
+	  @JSExport("apply")
     def apply(ta:Complex, tb:Complex) = {
 
 		// coefficients of quadratic x^2 - ta tb x + ta^2+tb^2 = 0

@@ -1,10 +1,14 @@
 package clewin.scala
 
+import scala.scalajs.js.annotation._
 /**
  * 
  */
 
+@JSExportTopLevel("AppoloniusGenerator")
 object AppoloniusGenerator {
+	
+	@JSExport("apply")
   def apply() = {
 
 		val a = new Mobius( //
