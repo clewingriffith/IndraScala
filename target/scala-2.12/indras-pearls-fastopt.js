@@ -1,4 +1,3 @@
-(function(){
 'use strict';
 /* Scala.js runtime support
  * Copyright 2013 LAMP/EPFL
@@ -24,17 +23,17 @@ var $g =
 $env["global"] = $g;
 
 
+$env["exportsNamespace"] = void 0;
 
 
-// Where to send exports
 
 
 
-var $e =
-  (typeof $env["exportsNamespace"] === "object" && $env["exportsNamespace"])
-    ? $env["exportsNamespace"] : $g;
 
-$env["exportsNamespace"] = $e;
+
+
+
+
 
 
 // Freeze the environment info
@@ -1358,62 +1357,6 @@ function $m_Lclewin_scala_GrandmaGenerator$() {
     $n_Lclewin_scala_GrandmaGenerator$ = new $c_Lclewin_scala_GrandmaGenerator$().init___()
   };
   return $n_Lclewin_scala_GrandmaGenerator$
-}
-/** @constructor */
-function $c_Lclewin_scala_JSArrayRenderer() {
-  $c_O.call(this);
-  this.resolution$1 = 0;
-  this.segments$1 = null
-}
-$c_Lclewin_scala_JSArrayRenderer.prototype = new $h_O();
-$c_Lclewin_scala_JSArrayRenderer.prototype.constructor = $c_Lclewin_scala_JSArrayRenderer;
-/** @constructor */
-function $h_Lclewin_scala_JSArrayRenderer() {
-  /*<skip>*/
-}
-$h_Lclewin_scala_JSArrayRenderer.prototype = $c_Lclewin_scala_JSArrayRenderer.prototype;
-$c_Lclewin_scala_JSArrayRenderer.prototype.init___I = (function(resolution) {
-  this.resolution$1 = resolution;
-  this.segments$1 = [1, 2, 3];
-  return this
-});
-var $d_Lclewin_scala_JSArrayRenderer = new $TypeData().initClass({
-  Lclewin_scala_JSArrayRenderer: 0
-}, false, "clewin.scala.JSArrayRenderer", {
-  Lclewin_scala_JSArrayRenderer: 1,
-  O: 1
-});
-$c_Lclewin_scala_JSArrayRenderer.prototype.$classData = $d_Lclewin_scala_JSArrayRenderer;
-/** @constructor */
-function $c_Lclewin_scala_JSArrayRenderer$() {
-  $c_O.call(this)
-}
-$c_Lclewin_scala_JSArrayRenderer$.prototype = new $h_O();
-$c_Lclewin_scala_JSArrayRenderer$.prototype.constructor = $c_Lclewin_scala_JSArrayRenderer$;
-/** @constructor */
-function $h_Lclewin_scala_JSArrayRenderer$() {
-  /*<skip>*/
-}
-$h_Lclewin_scala_JSArrayRenderer$.prototype = $c_Lclewin_scala_JSArrayRenderer$.prototype;
-$c_Lclewin_scala_JSArrayRenderer$.prototype.init___ = (function() {
-  return this
-});
-$c_Lclewin_scala_JSArrayRenderer$.prototype.$$lessinit$greater$default$1__I = (function() {
-  return 1000
-});
-var $d_Lclewin_scala_JSArrayRenderer$ = new $TypeData().initClass({
-  Lclewin_scala_JSArrayRenderer$: 0
-}, false, "clewin.scala.JSArrayRenderer$", {
-  Lclewin_scala_JSArrayRenderer$: 1,
-  O: 1
-});
-$c_Lclewin_scala_JSArrayRenderer$.prototype.$classData = $d_Lclewin_scala_JSArrayRenderer$;
-var $n_Lclewin_scala_JSArrayRenderer$ = (void 0);
-function $m_Lclewin_scala_JSArrayRenderer$() {
-  if ((!$n_Lclewin_scala_JSArrayRenderer$)) {
-    $n_Lclewin_scala_JSArrayRenderer$ = new $c_Lclewin_scala_JSArrayRenderer$().init___()
-  };
-  return $n_Lclewin_scala_JSArrayRenderer$
 }
 /** @constructor */
 function $c_Lclewin_scala_Mobius() {
@@ -6155,25 +6098,16 @@ var $d_scm_ArrayBuffer = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_scm_ArrayBuffer.prototype.$classData = $d_scm_ArrayBuffer;
-$e.AppoloniusGenerator = $m_Lclewin_scala_AppoloniusGenerator$();
-$e.GrandmaGenerator = $m_Lclewin_scala_GrandmaGenerator$();
+let $e_AppoloniusGenerator;
+export { $e_AppoloniusGenerator as AppoloniusGenerator };
+$e_AppoloniusGenerator = $m_Lclewin_scala_AppoloniusGenerator$();
+let $e_GrandmaGenerator;
+export { $e_GrandmaGenerator as GrandmaGenerator };
+$e_GrandmaGenerator = $m_Lclewin_scala_GrandmaGenerator$();
+let $e_RecursiveLinePlot;
+export { $e_RecursiveLinePlot as RecursiveLinePlot };
 /** @constructor */
-$e.JSArrayRenderer = (function() {
-  var $thiz = new $c_Lclewin_scala_JSArrayRenderer();
-  var jsx$1 = (arguments.length | 0);
-  var jsx$2 = 0;
-  var arg$rest = [];
-  while ((jsx$2 < jsx$1)) {
-    arg$rest.push(arguments[jsx$2]);
-    jsx$2 = ((jsx$2 + 1) | 0)
-  };
-  var prep0 = ((arg$rest[0] === (void 0)) ? $m_Lclewin_scala_JSArrayRenderer$().$$lessinit$greater$default$1__I() : $uI(arg$rest[0]));
-  $c_Lclewin_scala_JSArrayRenderer.prototype.init___I.call($thiz, prep0);
-  return $thiz
-});
-$e.JSArrayRenderer.prototype = $c_Lclewin_scala_JSArrayRenderer.prototype;
-/** @constructor */
-$e.RecursiveLinePlot = (function(arg$1, arg$2, arg$3) {
+$e_RecursiveLinePlot = (function(arg$1, arg$2, arg$3) {
   var $thiz = new $c_Lclewin_scala_RecursiveLinePlot();
   var prep0 = $as_Lclewin_scala_MobiusGenerator(arg$1);
   var prep1 = $uI(arg$2);
@@ -6181,6 +6115,5 @@ $e.RecursiveLinePlot = (function(arg$1, arg$2, arg$3) {
   $c_Lclewin_scala_RecursiveLinePlot.prototype.init___Lclewin_scala_MobiusGenerator__I__D.call($thiz, prep0, prep1, prep2);
   return $thiz
 });
-$e.RecursiveLinePlot.prototype = $c_Lclewin_scala_RecursiveLinePlot.prototype;
-}).call(this);
+$e_RecursiveLinePlot.prototype = $c_Lclewin_scala_RecursiveLinePlot.prototype;
 //# sourceMappingURL=indras-pearls-fastopt.js.map
