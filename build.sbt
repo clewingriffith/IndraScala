@@ -7,8 +7,9 @@ libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "0.9.6"
 // This is an application with a main method
 scalaJSUseMainModuleInitializer := false
 
-// scalaJSLinkerConfig ~= { _.withModuleKind(ModuleKind.ESModule) }
-//scalaJSModuleKind in Compile := ModuleKind.ESModule
+scalaJSLinkerConfig ~= { _.withModuleKind(ModuleKind.ESModule) }
+
 
 //Compile/mainClass := Some("clewin.AppoloniusWebApp")
+
 
